@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titleBillingData"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/noCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp76"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp32"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mini_card"
+                android:elevation="@dimen/dp10">
+
+            <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:src="@drawable/logo_interpass"/>
+
+            <TextView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp2"
+                    android:layout_marginTop="@dimen/dp10"
+                    app:layout_constraintTop_toBottomOf="@+id/logo"
+                    android:background="@color/grayLine"/>
+
+            <TextView
+                    android:id="@+id/txtvUserID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayText"
+                    android:text="@string/billingMessage"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginTop="@dimen/dp25"
+                    android:layout_marginStart="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line"/>
+
+            <Button
+                    android:id="@+id/btnAddBilling"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:text="@string/addBillingData"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:background="@drawable/button_blue"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rubik_medium"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp45"
+                    android:layout_marginBottom="@dimen/dp60"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvUserID"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAddCard"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/dp60"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:weightSum="2"
+                    android:visibility="invisible">
+
+                <ImageView
+                        android:id="@+id/imgVisa"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/visa"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"/>
+
+                <ImageView
+                        android:id="@+id/imgMaster"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/mastercard"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"/>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/cardsView"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp76"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/dp10"
+            tools:visibility="visible">
+
+        <android.support.constraint.Guideline
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvBillings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_marginTop="@dimen/dp0"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline2"/>
+
+        <android.support.constraint.Guideline
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline2"/>
+
+        <Button
+                android:id="@+id/btnAddBillings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="@string/addBillingData"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:background="@drawable/button_blue"
+                android:layout_weight="1"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp40"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAddBillings"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:weightSum="2"
+                android:visibility="invisible">
+
+            <ImageView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/visa"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"/>
+
+            <ImageView
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/mastercard"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"/>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

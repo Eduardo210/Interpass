@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                tools:text="@string/titleTag"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+            android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:elevation="@dimen/dp10">
+
+                <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/logo_interpass"/>
+
+                <TextView
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginTop="@dimen/dp15"
+                        app:layout_constraintTop_toBottomOf="@+id/logo"
+                        android:background="@color/grayLine"/>
+
+                <RelativeLayout
+                        android:id="@+id/relative"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:background="@drawable/button_blue"
+                        app:layout_constraintTop_toBottomOf="@+id/line"
+                        android:layout_marginTop="@dimen/dp30">
+
+                    <Button
+                            android:id="@+id/btnTagScan"
+                            android:fontFamily="@font/rubik_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:text="@string/TagScan"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:drawableRight="@drawable/barcode"
+                            android:drawablePadding="@dimen/dp10"
+                            android:paddingStart="@dimen/dp60"
+                            android:paddingEnd="@dimen/dp60"/>
+
+                </RelativeLayout>
+
+                <Button
+                        android:id="@+id/btnQuestion"
+                        android:layout_width="@dimen/dp32"
+                        android:layout_height="@dimen/dp32"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/question_copy"
+                        android:drawablePadding="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp14"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/relative"
+                        android:gravity="center"/>
+
+                <TextView
+                        android:id="@+id/txtvPrefix"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/tagPrefix"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnQuestion"
+                        android:textAlignment="viewStart"/>
+
+
+                <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinnerPrefix"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/text_edit_default"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvPrefix"/>
+
+                <LinearLayout
+                        android:id="@+id/linearParent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerPrefix"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:weightSum="2">
+
+                    <LinearLayout
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1.2"
+                            android:gravity="center_vertical"
+                            android:paddingEnd="@dimen/dp7">
+
+                        <TextView
+                                android:id="@+id/txtvTagNumber"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/blue"
+                                android:text="@string/tagNumber"
+                                android:textAlignment="viewStart"/>
+
+                        <EditText
+                                android:id="@+id/txtTagNumber"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5"
+                                android:layout_marginTop="@dimen/dp5"
+                                app:layout_constraintTop_toBottomOf="@+id/txtvTagNumber"
+                                android:textSize="18sp"
+                                android:background="@drawable/edit_text"
+                                android:inputType="number"
+                                android:paddingStart="@dimen/dp10"/>
+
+                        <TextView
+                                android:id="@+id/txtvTagNumberError"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginTop="@dimen/dp0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+                                android:textAlignment="center"
+                                android:background="@drawable/error_view"
+                                android:visibility="gone"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="0.80"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/dp7">
+
+                        <TextView
+                                android:id="@+id/txtvDig"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/grayText"
+                                android:text="@string/tagDig"
+                                android:textAlignment="viewStart"/>
+
+                        <EditText
+                                android:id="@+id/txtDig"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp40"
+                                android:padding="@dimen/dp5"
+                                android:layout_marginTop="@dimen/dp5"
+                                app:layout_constraintTop_toBottomOf="@+id/txtvDig"
+                                android:textSize="18sp"
+                                android:background="@drawable/edit_text"
+                                android:maxLength="1"
+                                android:inputType="number"
+                                android:paddingStart="@dimen/dp10"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/txtvVehicleType"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/vehicleType"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearParent"
+                        android:textAlignment="viewStart"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinnerVehicle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/text_edit_default"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvVehicleType"/>
+
+                <TextView
+                        android:id="@+id/txtvPlate"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/plate"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerVehicle"
+                        android:textAlignment="viewStart"/>
+
+                <EditText
+                        android:id="@+id/txtPlate"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvPlate"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="@dimen/dp10"
+                        android:inputType="textCapCharacters|textPersonName"
+                        android:digits="@string/charactersNumbersCaps"
+                        android:maxLength="7"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"/>
+
+                <TextView
+                        android:id="@+id/txtvNickName"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/nickName"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPlate"
+                        android:textAlignment="viewStart"
+                        android:inputType="textPersonName"/>
+
+                <EditText
+                        android:id="@+id/txtNickName"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvNickName"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text"
+                        android:inputType="textPersonName|textCapWords"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789"
+                        android:paddingStart="@dimen/dp10"
+                        android:imeOptions="actionGo"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginStart="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNickName"/>
+
+                <Button
+                        android:id="@+id/btnNoticePrivace"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy"
+                        android:textColor="@color/grayText"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textAlignment="viewStart"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNickName"
+                        app:layout_constraintLeft_toRightOf="@+id/checkbox"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginStart="@dimen/dp10"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginStart="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnNoticePrivace" />
+
+                <TextView
+                        android:id="@+id/txtv3"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/tagPredetermido"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/grayText"
+                        android:textSize="14sp"
+                        android:layout_marginStart="@dimen/dp10"
+                        app:layout_constraintBottom_toBottomOf="@+id/checkbox1"
+                        app:layout_constraintLeft_toRightOf="@+id/checkbox"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/checkbox1"
+                        app:layout_constraintTop_toTopOf="@+id/checkbox1" />
+
+                <Button
+                        android:id="@+id/btnRegister"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp76"
+                        android:background="@drawable/button"
+                        android:enabled="false"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="@string/confirmBtn"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtv3" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="mx.com.nut.basecleanarquitecture">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+            android:allowBackup="true"
+            android:usesCleartextTraffic="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/noActionBar"
+            android:hardwareAccelerated="true">
+
+        <activity
+                android:name=".presentation.view.SplashActivity"
+                android:label="@string/title_activity_tutorial">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".presentation.view.TutorialActivity"
+                  android:label="@string/title_activity_tutorial"/>
+
+        <activity android:name=".presentation.view.LoginActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.RegisterActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.RegisterTagActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"
+                  android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".presentation.view.TagsActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.DetailTagActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.AboutActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.PrivacyActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.RecoverPasswordActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.ScannerActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.MyAccountActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.EditProfileActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.MovesDetailActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.PaymentsActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.AddPaymentActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.PaymentDetailActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.PurchasesActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.ChangePasswordActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.BillingDataActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.AddBillingActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.QRActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.BillingMovesActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.NoticesActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+
+        <activity android:name=".presentation.view.NoticesDetailActivity"
+                  android:theme="@style/AppTheme.TransparentTheme"/>
+    </application>
+
+</manifest>

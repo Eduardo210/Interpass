@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/blue"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/contentView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp0"
+            android:background="@drawable/content_card"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+                android:id="@+id/imageViewType"
+                android:layout_width="@dimen/dp54"
+                android:layout_height="@dimen/dp31"
+                android:layout_weight="1"
+                tools:src="@drawable/visa"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp16"/>
+
+        <TextView
+                android:id="@+id/txtvDescription"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageViewType"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp19"
+                tools:text="Debito"/>
+
+        <TextView
+                android:id="@+id/txtvDefault"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp19"
+                android:text="Predeterminada"
+                android:visibility="invisible"/>
+
+        <TextView
+                android:id="@+id/txtvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="23sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="@dimen/dp30"
+                tools:text="•••• •••• •••• •••• 2742"/>
+
+        <TextView
+                android:id="@+id/txtvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toBottomOf="@+id/txtvNumber"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp20"
+                tools:text="Lorena Méndez Mondragón"/>
+
+        <TextView
+                android:id="@+id/txtvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toBottomOf="@+id/txtvNumber"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp20"
+                tools:text="02/22 "/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

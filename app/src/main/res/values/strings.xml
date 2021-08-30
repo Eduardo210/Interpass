@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">Interpass</string>
+    <string name="title_activity_tutorial">Interpass</string>
+
+
+    <!--Tutorial-->
+    <string name="title1">Mis Tags</string>
+    <string name="description1">Administra tus tags, revisa tu saldo y realiza recargas fácilmente.</string>
+    <string name="title2">Mis Movimientos</string>
+    <string name="description2">Visualiza tus cruces por carretera, dónde, cuándo y cuánto te costó.</string>
+    <string name="title3">Mis Facturas</string>
+    <string name="description3">Consulta las facturas que necesites de cada uno de tus viajes.</string>
+
+    <!--Login-->
+    <string name="userID">ID de usuario</string>
+    <string name="pass">Contraseña</string>
+    <string name="userRemember">Recordar usuario</string>
+    <string name="forgotPassword">¿Olvidaste tu contraseña?</string>
+    <string name="noticePrivacy"><u>Aviso de privacidad.</u></string>
+    <string name="register">Registrarme </string>
+    <string name="login">Ingresar</string>
+    <string name="codeMessage">Ingresa el código de verificación enviado a tu correo para poder continuar.</string>
+    <string name="messageChangePass">Hemos enviado un correo con la información necesaria para que puedas ingresar a tu cuenta.</string>
+    <string name="codeMessageSuccess">¡Listo!, tu cuenta ha sido verificada con éxito. </string>
+
+    <!--Register-->
+    <string name="name">Nombre</string>
+    <string name="lastName">Apellido paterno</string>
+    <string name="lastName2">Apellido materno</string>
+    <string name="email">Correo electrónico</string>
+    <string name="phone">Número de teléfono móvil</string>
+
+    <!--Billing Data-->
+    <string name="nameBilling">Nombre / Razón Social*</string>
+    <string name="rfcBilling">RFC*</string>
+    <string name="emailBilling">Correo electrónico*</string>
+    <string name="noExBilling">No. Ext*</string>
+    <string name="noInBilling">No. Int</string>
+    <string name="cpBilling">C.P*</string>
+    <string name="colBilling">Colonia*</string>
+    <string name="townBilling">Municipio / Delegación*</string>
+    <string name="stateBilling">Estado*</string>
+    <string name="cityBilling">Ciudad*</string>
+
+    <!--Add Payment-->
+    <string name="cardType">Tipo de tarjeta</string>
+    <string name="cardName">Alias</string>
+    <string name="cardNumber">Número de tarjeta </string>
+    <string name="cardDate">Fecha de vencimiento</string>
+    <string name="cardCode">CVC/CVV</string>
+    <string name="cardDebit">Débito</string>
+    <string name="cardCredit">Crédito</string>
+
+    <!--Register Tag-->
+    <string name="tagPrefix">Prefijo de tag</string>
+    <string name="tagNumber">Número de tag</string>
+    <string name="tagDig">Dig. verificador</string>
+    <string name="vehicleType">Tipo de vehículo</string>
+    <string name="vehicleTypeO">Tipo de vehículo*</string>
+    <string name="plate">Placa</string>
+    <string name="plateO">Placa*</string>
+    <string name="nickName">Alias</string>
+    <string name="nickNameO">Alias*</string>
+    <string name="privacy">Al concluir el proceso usted declara que ha leído y acepta nuestro <u>Aviso de privacidad.</u></string>
+    <string name="dialogSuccess">Hemos enviado un correo con la información necesaria para que puedas ingresar a tu cuenta.</string>
+    <string name="newTagTittle">Tag agregado</string>
+    <string name="updateTagTittle">Cambios guardados</string>
+    <string name="newTagDescription">¡Listo! Se ha agregado correctamente el tag.</string>
+    <string name="updateTagDescription">Los cambios realizados han sido actualizados. </string>
+
+    <!--Register Tag Card-->
+    <string name="moves">Movimientos</string>
+    <string name="noMoves">No tienes movimientos \nregistrados</string>
+    <string name="addTag">Agregar tag</string>
+    <string name="tagNumberCard">Número de tag</string>
+
+    <!--Buttons-->
+    <string name="nextBtn">Siguiente</string>
+    <string name="confirmBtn">Aceptar</string>
+    <string name="cancelBtn">Cancelar</string>
+    <string name="TagScan">Escanear tag</string>
+    <string name="addMoney">Recargar saldo</string>
+    <string name="billing">Facturar</string>
+    <string name="saveTag">Guardar cambios</string>
+    <string name="deleteTag">Desvincular tag</string>
+    <string name="recoverPassword">Recuperar contraseña</string>
+    <string name="changePassword">Cambiar contraseña</string>
+    <string name="addCard">Agregar tarjeta</string>
+    <string name="addBillingData">Agregar datos</string>
+    <string name="payBtn">Realizar recarga</string>
+
+    <!--Titles-->
+    <string name="titleLogIn">Inicio de sesión</string>
+    <string name="titleChangePassword">Recuperar contraseña</string>
+    <string name="titleRegister">Registro</string>
+    <string name="titleTag">Registro de tag</string>
+    <string name="titleNewTag">Agrega tag</string>
+    <string name="titleMyTags">Mis tags</string>
+    <string name="titleEditTag">Editar tag </string>
+    <string name="titleTagDialog">Tag Interpass</string>
+    <string name="titleRegisterDialog">Correo enviado</string>
+    <string name="titleError">Error</string>
+    <string name="titlePurchaseSuccess">Pago exitoso </string>
+    <string name="titleUpdate">Actualización</string>
+    <string name="titlePaymentHelp">Deslizar tarjeta</string>
+    <string name="titleEditProfileSuccess">Cuenta actualizada</string>
+    <string name="titleChangePassSuccess">Contraseña modificada </string>
+    <string name="titleRecoverCode">Reenviar código</string>
+    <string name="titleCode">Código de verificación</string>
+    <string name="titleCodeSucces">Cuenta verificada</string>
+    <string name="titleAbout">Aviso de privacidad</string>
+    <string name="titleDeleteTag">¿Está seguro de desvincular el tag?</string>
+    <string name="titleDeleteTagSuccess">Tag desvinculado</string>
+    <string name="titleTagScanner">Escanear tag</string>
+    <string name="titleMyAccount">Mi cuenta</string>
+    <string name="titleMovesDetail">Detalle de movimiento</string>
+    <string name="titleCardDetail">Detalle de tarjeta</string>
+    <string name="titlePayments">Métodos de pago</string>
+    <string name="titleBillingData">Datos de facturación</string>
+    <string name="titleAddPayment">Agregar tarjeta</string>
+    <string name="titleAddBilling">Agregar datos</string>
+    <string name="titleNotice">Noticias</string>
+    <string name="titleAddPaymentMessage">Tarjeta agregada</string>
+    <string name="titleUpdatePaymentMessage">Tarjeta actualizada</string>
+    <string name="titleDeletePaymentMessage">¿Está seguro de eliminar la tarjeta?</string>
+    <string name="titleDeletePaymentSuccess">Tarjeta eliminada</string>
+    <string name="titlePurchase">Recargar saldo</string>
+    <string name="titleBilling">Facturar</string>
+
+    <!--Extras-->
+    <string name="messageDeleteTag">Esta acción no puede deshacerse.</string>
+    <string name="messagePurchaseSuccess">¡Listo!, tu pago ha sido procesado exitosamente. </string>
+    <string name="messageDeleteCardSuccess">¡Listo!, tu tarjeta ha sidoeliminada correctamente. </string>
+    <string name="messageDeleteCard">Esta opción no puede deshacerse.</string>
+    <string name="messageAddPayment">¡Listo!, tu tarjeta ha sido agregada correctamente.  </string>
+    <string name="messageRecoverCode">¿Desea recibir el código nuevamente?</string>
+    <string name="messageChangePassword">Ingresa el correo electrónico con el que creaste tu cuenta.</string>
+    <string name="messageDeleteTagSuccess">Se ha desvinculado correctamente, el registro del tag.</string>
+    <string name="onlyCharacters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="charactersNumbers">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="charactersNumbersCaps">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string name="tagScannerMessage">Acerca el lector al código de barras para escanearlo.</string>
+    <string name="catalogError">Los catálogos no están disponibles en este momento.</string>
+    <string name="code">code</string>
+    <string name="internet">internet</string>
+    <string name="dateHour">Fecha-Hora</string>
+    <string name="profileEditMessage">¡Listo!, tu cuenta ha sido actualizada correctamente.</string>
+    <string name="changePassMessage">¡Listo! tu contraseña se ha modificado exitosamente.</string>
+    <string name="updatePaymentMessage">¡Listo!, tu tarjeta ha sido actualizada correctamente.</string>
+    <string name="paymentMessage">Te recomendamos agregar por lo menos un método de pago para poder realizar tus recargas.</string>
+    <string name="billingMessage">No tienes datos de facturación, para poder realizar tus facturas agrega por lo menos un dato.</string>
+
+    <string name="aboutText"><b><font fgcolor="#2c3e50">TELEPEAJE INTERPASS©\n\n</font></b>
+        <b><font fgcolor="#a2abb3">INTERPASS es la denominación del sistema de Telepeaje interoperable implantado en autopistas de la República Mexicana.\n\n</font></b>
+        <b><font fgcolor="#2c3e50">TAG\n\n</font></b>
+        <b><font fgcolor="#a2abb3">Los vehículos equipados con un dispositivo INTERPASS pueden circular por las autopistas en las que se admita este sistema de pago.
+        En estas vías una antena lee, gracias a un moderno sistema de comunicación basado en microondas de corto alcance,
+        los datos de tu dispositivo INTERPASS cargando a una cuenta o tarjeta vinculada el importe correspondiente al paso por la autopista.\n\n</font></b>
+        <b><font fgcolor="#2c3e50">SOPORTE\n\n</font></b>
+        <b><font fgcolor="#a2abb3">Nuestro equipo está capacitado para asistir cualquier duda que pudiera tener y ayudarle a usar nuestros servicios sin inconvenientes.</font></b>
+    </string>
+    <string name="privacyText">
+            <b><font fgcolor="#2c3e50">INTERPASS,</font></b><b><font fgcolor="#a2abb3"> con domicilio en MARIANO MATAMOROS 323, LA JOYA, TLALPAN, CIUDAD DE MÉXICO, MÉXICO, C.P. 14000, de conformidad con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y en su Reglamento, hace de su conocimiento que es responsable de recabar sus datos personales, del uso que se les dé a los mismos y de su protección.\n\n</font></b>
+            <b><font fgcolor="#2c3e50"> FINALIDAD EN EL TRATAMIENTO DE SUS DATOS PERSONALES\n\n</font></b>
+            <b><font fgcolor="#a2abb3">Recopilamos sus datos personales, por lo que solicitamos su consentimiento a través del presente Aviso de Privacidad con el objeto de utilizarlos para los siguientes fines:\n\n
+            1.- Comprar productos o contratar servicios de INTERPASS.\n\n
+            2.- Activar o registrar determinados productos o servicios de INTERPASS o mejorar la funcionalidad.\n\n
+            3.-Recibir información sobre productos y servicios de INTERPASS.\n\n
+            4.-Ayudarnos a desarrollar productos, servicios, y crear campañas diseñadas teniendo en cuenta sus intereses, optimizar los servicios al cliente y mejorar continuamente nuestros sitios web.\n\n
+            5.- Ayudarnos a mejorar los productos y servicios, y permitir que INTERPASS le mantenga informado y le invite a participar en las pruebas de nuevos productos y servicios.\n\n
+            Resolver problemas relacionados con el consumidor o los productos o servicios.
+            Recibir mensajes personalizados, ofertas especiales y anuncios relevantes para sus intereses personales, en función de la información que ha compartido con nosotros y la que hemos recopilado a través de las cookies o técnicas similares en relación con su uso de los sitios web, las redes sociales y los blogs de INTERPASS.</font></b>
+    </string>
+
+    <string name="noticeDemo">
+        "Los sistemas de telepeaje ya se han hecho una parte importante en la vida de los automovilistas, no sólo por su
+        uso en las autopistas urbanas sino en los diferentes caminos nacionales en donde su uso permite el ahorro de
+        minutos valiosos al contar con un carril exclusivo. Sin embargo, poca gente conoce los secretos que esconden los
+        tags o cómo actuar ante ciertas situaciones. Por ejemplo, te has preguntado ¿qué hacer en caso de un robo del
+        dispositivo? Aunque no es algo común existen casos en que los aparatos, especialmente los que no son fijos,
+        son retirados de los coches. Los conductores tardan en darse cuenta y cuando se percatan o ya no tienen crédito
+        o deben cruces que ni siquiera hicieron. Si te ves en esta situación tienes que comunicarte de inmediato con la
+        compañía que te brinda el servicio para que de inmediato tomen tu reporte para que lo desactiven. Si te has
+        preguntado qué sucede si una vez que hago el cruce de la pluma retiro el Tag del coche al momento del descenso,
+        con el objetivo de no pagar el peaje, te tenemos una mala noticia. El dispositivo cuenta con una señal de
+        frecuencia que incluso si lo traes en la cajuela puede ser capaz de ser leído y, con ello, cobrado el tramo que
+        transitaste. Si por alguna razón el Tag sufre un daño durante tu viaje o no es posible reconocerlo a la salida
+        de la sección de cobro, todo el recorrido te será cargado a tu cuenta. En el caso de las calcomanías no pases
+        líquidos o trapos por encima del dispositivo ya que lo dañará. Sin embargo, si el cobro no se realiza por un
+        error del sistema, es posible reclamar la suma y que tu dinero te sea devuelto. En ocasiones algunos
+        dispositivos de telepeaje resultan dañados, ya sea por un golpe o por la exposición a condiciones climáticas.
+        En estos casos no tienes que preocuparte mucho, ya que es posible transferir el saldo que tengas en el sistema
+        de prepago a un nuevo Tag. Para conseguirlo únicamente comunícate con la compañía que te brinda el servicio para
+        que completes el trámite establecido. Si tu dispositivo está en sistema postpago, es aún más sencillo dado que
+        únicamente hay que transferir la información de la tarjeta bancaria al nuevo, esto incluso lo puedes hacer por
+        internet con algunos proveedores. Recuerda cuidar el tag como si se tratara de un teléfono celular."
+    </string>
+    <string name="navigation_drawer_open">Open menu</string>
+    <string name="navigation_drawer_close">Close menu</string>
+
+    <!--Menu-->
+    <string name="menu_my_account">Mi cuenta</string>
+    <string name="menu_recharge">Recarga de saldo</string>
+    <string name="menu_payment_methods">Métodos de pago</string>
+    <string name="menu_receipts">Mis facturas</string>
+    <string name="menu_bill_info">Datos de facturación</string>
+    <string name="menu_news">Noticias</string>
+    <string name="menu_about">Acerca de INTERPASS©</string>
+    <string name="menu_log_out">Cerrar sesión</string>
+
+    <!--Account-->
+    <string name="change_password">Modificar contraseña</string>
+    <string name="remove_account">Eliminar Cuenta</string>
+    <string name="change_photo_dialog_title">Cambiar foto</string>
+    <string name="change_photo_dialog_message">Haz una foto nueva o elige una de tu galería.</string>
+    <string name="option_gallery">Galería</string>
+    <string name="option_camera">Cámara</string>
+    <string name="tagPredetermido">Tag Predeterminado</string>
+    <string name="rfcPredetermido">RFC Predeterminado</string>
+
+</resources>

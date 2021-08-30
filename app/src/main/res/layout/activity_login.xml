@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titleLogIn"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card"
+                    android:elevation="@dimen/dp10">
+
+                <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/logo_interpass"/>
+
+                <TextView
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginTop="@dimen/dp10"
+                        app:layout_constraintTop_toBottomOf="@+id/logo"
+                        android:background="@color/grayLine"/>
+
+                <TextView
+                        android:id="@+id/txtvUserID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue"
+                        android:text="@string/userID"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line"
+                        android:textAlignment="viewStart"/>
+
+                <EditText
+                        android:id="@+id/txtUserID"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:textSize="18sp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvUserID"
+                        android:background="@drawable/edit_text"
+                        android:fontFamily="@font/rubik_regular"
+                        android:inputType="textCapCharacters"
+                        android:paddingStart="@dimen/dp10"/>
+
+                <TextView
+                        android:id="@+id/txtvUserIDError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtUserID"
+                        android:textAlignment="center"
+                        android:background="@drawable/error_view"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"
+                        android:padding="@dimen/dp5"/>
+
+                <TextView
+                        android:id="@+id/txtvPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/pass"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvUserIDError"
+                        android:textAlignment="viewStart"/>
+
+                <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etPasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp53"
+                        app:passwordToggleEnabled="true"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvPassword">
+
+                    <EditText
+                            android:id="@+id/txtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:background="@drawable/edit_text"
+                            android:fontFamily="@font/rubik_regular"
+                            android:inputType="textPassword"
+                            android:paddingStart="@dimen/dp10"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                        android:id="@+id/txtvPasswordError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout"
+                        android:textAlignment="viewStart"
+                        android:background="@drawable/error_view"
+                        android:text="ID de usuario inválido"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"
+                        android:padding="@dimen/dp5"/>
+
+                <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switchC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvPasswordError"/>
+
+                <TextView
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/userRemember"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toRightOf="@+id/switchC"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvPasswordError"
+                        android:textAlignment="viewStart"/>
+
+                <android.support.constraint.Guideline
+                        android:id="@+id/guide1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="320dp" />
+
+                <Button
+                        android:id="@+id/btnForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="@string/forgotPassword"
+                        android:textColor="@color/blue"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/switchC"
+                        android:paddingTop="@dimen/dp1"
+                        android:paddingBottom="@dimen/dp1"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp20"/>
+
+                <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnForgotPassword"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        android:weightSum="2">
+
+                    <Button
+                            android:id="@+id/btnRegister"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:text="@string/register"
+                            android:textColor="@color/blue"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:background="@drawable/button_white"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/rubik_medium"
+                            android:layout_marginEnd="@dimen/dp10"/>
+
+                    <Button
+                            android:id="@+id/btnLogIn"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="match_parent"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:text="@string/login"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:background="@drawable/button_blue"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/rubik_medium"
+                            android:layout_marginStart="@dimen/dp10"/>
+                </LinearLayout>
+
+                <Button
+                        android:id="@+id/btnNoticePrivace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:text="@string/noticePrivacy"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:paddingTop="@dimen/dp1"
+                        android:fontFamily="@font/rubik_medium"
+                        android:paddingBottom="@dimen/dp1"
+                        android:layout_marginTop="@dimen/dp5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

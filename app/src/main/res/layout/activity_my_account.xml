@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true"
+        tools:context=".presentation.view.MyAccountActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <TextView
+            android:id="@+id/txtvTitle"
+            android:fontFamily="@font/walsheim_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="@string/titleMyAccount"
+            android:textAlignment="center"
+            android:translationZ="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <ScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp100"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:elevation="@dimen/dp11"
+                        android:src="@drawable/icon_profile"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                        android:id="@+id/imgAccount"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="@dimen/dp90"
+                        android:elevation="@dimen/dp11"
+                        app:layout_constraintLeft_toLeftOf="@id/imgBack"
+                        app:layout_constraintRight_toRightOf="@id/imgBack"
+                        app:layout_constraintTop_toTopOf="@id/imgBack"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBack"/>
+
+                <View
+                        android:id="@+id/guide1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginBottom="@dimen/dp1"
+                        app:layout_constraintTop_toTopOf="@id/imgBack"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBack"/>
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card"
+                        android:elevation="@dimen/dp10"
+                        app:layout_constraintTop_toTopOf="@id/guide1"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                            android:id="@+id/btnEditAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_edit"
+                            android:layout_marginTop="@dimen/dp40"
+                            android:layout_marginEnd="@dimen/dp20"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/name"
+                            android:layout_marginTop="@dimen/dp70"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textAlignment="viewStart"/>
+
+                    <TextView
+                            android:id="@+id/txtvName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelName"
+                            tools:text="Gustavo"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelLastName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/lastName"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvName"
+                            android:textAlignment="viewStart"/>
+
+                    <TextView
+                            android:id="@+id/txtvLastName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelLastName"
+                            tools:text="Peralta"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelSurName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/lastName2"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvLastName"
+                            android:textAlignment="viewStart"/>
+
+                    <TextView
+                            android:id="@+id/txtvSurName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelSurName"
+                            tools:text="Vega"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelEmail"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/email"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvSurName"
+                            android:textAlignment="viewStart"/>
+
+                    <TextView
+                            android:id="@+id/txtvEmail"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelEmail"
+                            tools:text="gustavo@example.net"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelPhone"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/phone"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvEmail"
+                            android:textAlignment="viewStart"/>
+
+                    <TextView
+                            android:id="@+id/txtvPhone"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelPhone"
+                            tools:text="+52 1 55 44429350"/>
+
+                    <Button
+                            android:id="@+id/btnChangePassword"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp40"
+                            android:textSize="18sp"
+                            android:text="@string/change_password"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvPhone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginBottom="@dimen/dp90"
+                            android:background="@drawable/button_blue"
+                            android:textColor="@color/white"/>
+
+                    <Button
+                            android:id="@+id/btnForgotPassword"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:textSize="18sp"
+                            android:text="@string/recoverPassword"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintTop_toBottomOf="@+id/btnChangePassword"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="@dimen/dp90"
+                            android:background="@drawable/button_blue"
+                            android:textColor="@color/white"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

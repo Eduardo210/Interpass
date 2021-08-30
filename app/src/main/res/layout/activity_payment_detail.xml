@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titleCardDetail"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mini_card"
+                    android:elevation="@dimen/dp10">
+
+                <Button
+                        android:id="@+id/btnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="Editar tarjeta"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawablePadding="@dimen/dp16"
+                        android:drawableEnd="@drawable/ic_edit"/>
+
+                <LinearLayout
+                        android:id="@+id/linear1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp60">
+
+                    <TextView
+                            android:id="@+id/txtvCardType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Tipo de tarjeta"/>
+
+                    <TextView
+                            android:id="@+id/txtvCardType2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/blackText"
+                            android:fontFamily="@font/rubik_regular"
+                            tools:text="Débito"
+                            android:layout_marginTop="@dimen/dp10"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/linear2"
+                        app:layout_constraintTop_toBottomOf="@+id/linear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp20">
+
+                    <TextView
+                            android:id="@+id/txtvNickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Nombre de la tarjeta"/>
+
+                    <TextView
+                            android:id="@+id/txtvNickName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/blackText"
+                            android:fontFamily="@font/rubik_regular"
+                            tools:text="Tarjeta 1"
+                            android:layout_marginTop="@dimen/dp10"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/linear3"
+                        app:layout_constraintTop_toBottomOf="@+id/linear2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp20">
+
+                    <TextView
+                            android:id="@+id/txtvCardNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Número de tarjeta "/>
+
+                    <TextView
+                            android:id="@+id/txtvCardNumber2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/blackText"
+                            android:fontFamily="@font/rubik_regular"
+                            tools:text="•••• •••• •••• 2742"
+                            android:layout_marginTop="@dimen/dp10"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/linear4"
+                        app:layout_constraintTop_toBottomOf="@+id/linear3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp20">
+
+                    <TextView
+                            android:id="@+id/txtvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Fecha de vencimiento"/>
+
+                    <TextView
+                            android:id="@+id/txtvDate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/blackText"
+                            android:fontFamily="@font/rubik_regular"
+                            tools:text="02/20"
+                            android:layout_marginTop="@dimen/dp10"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/linear4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:visibility="gone"/>
+
+                <TextView
+                        android:id="@+id/txtv3"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="Tarjeta predeterminada"
+                        android:layout_marginTop="@dimen/dp26"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toRightOf="@+id/checkbox"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linear4"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone"/>
+
+                <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp30"
+                        app:layout_constraintTop_toBottomOf="@+id/checkbox"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginTop="@dimen/dp20"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/blue"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp0"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/content_tag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="32:8"
+            android:elevation="@dimen/dp5">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutImg"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp10">
+
+            <ImageView
+                    android:id="@+id/imgMove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:src="@drawable/icono_cruce"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/txtvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/grayText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/layoutImg"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp18"
+                tools:text="21/02/2019"/>
+
+        <TextView
+                android:id="@+id/txtvHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/grayText"
+                android:fontFamily="@font/rubik_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp18"
+                tools:text="03:19 p.m"/>
+
+        <TextView
+                android:id="@+id/txtvDescription"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintTop_toBottomOf="@+id/txtvDate"
+                app:layout_constraintLeft_toRightOf="@+id/layoutImg"
+                app:layout_constraintRight_toLeftOf="@+id/txtvAmount"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp12"
+                tools:text="MÉXICO-TOLUCA"/>
+
+        <TextView
+                android:id="@+id/txtvAmount"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtvDate"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                tools:text="-$280.00"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

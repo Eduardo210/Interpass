@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titleAddBilling"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:elevation="@dimen/dp10">
+
+                <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/logo_interpass"/>
+
+                <TextView
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginTop="@dimen/dp15"
+                        app:layout_constraintTop_toBottomOf="@+id/logo"
+                        android:background="@color/grayLine"/>
+
+                <TextView
+                        android:id="@+id/txtvName"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/nameBilling"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/line"
+                        android:textAlignment="viewStart"/>
+
+                <EditText
+                        android:id="@+id/txtName"
+                        android:inputType="textCapWords|textPersonName"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="@dimen/dp10"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvName"/>
+
+                <TextView
+                        android:id="@+id/txtvNameError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtName"
+                        android:textAlignment="center"
+                        android:background="@drawable/error_view"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"/>
+
+                <TextView
+                        android:id="@+id/txtvRFC"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/rfcBilling"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtName"
+                        android:textAlignment="viewStart"/>
+
+                <EditText
+                        android:id="@+id/txtRFC"
+                        android:inputType="textCapCharacters"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvRFC"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp4"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:digits="@string/charactersNumbersCaps"
+                        android:maxLength="13"/>
+
+                <TextView
+                        android:id="@+id/txtvRFCError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtRFC"
+                        android:textAlignment="center"
+                        android:background="@drawable/error_view"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"/>
+
+                <TextView
+                        android:id="@+id/txtvEmail"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/emailBilling"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtRFC"
+                        android:textAlignment="viewStart"/>
+
+                <EditText
+                        android:id="@+id/txtEmail"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvEmail"
+                        android:textSize="18sp"
+                        android:background="@drawable/edit_text"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp4"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+                <TextView
+                        android:id="@+id/txtv3"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/rfcPredetermido"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/grayText"
+                        android:textSize="14sp"
+                        android:layout_marginStart="@dimen/dp10"
+                        app:layout_constraintBottom_toBottomOf="@+id/checkbox1"
+                        app:layout_constraintLeft_toRightOf="@+id/checkbox"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/checkbox1"
+                        app:layout_constraintTop_toTopOf="@+id/checkbox1" />
+
+                <TextView
+                        android:id="@+id/txtvEmailError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginTop="@dimen/dp0"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+                        android:textAlignment="center"
+                        android:background="@drawable/error_view"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5"/>
+
+                <Button
+                        android:id="@+id/btnAddBilling"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="@string/confirmBtn"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginTop="@dimen/dp80"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+                        android:layout_marginBottom="@dimen/dp76"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:enabled="false"
+                        android:background="@drawable/button"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/blue"
+              android:endColor="@color/blueDown"
+              android:angle="270"/>
+    <stroke android:width="@dimen/dp2"
+            android:color="@color/blue"/>
+    <padding android:left="@dimen/dp1"
+             android:top="@dimen/dp1"
+             android:right="@dimen/dp1"
+             android:bottom="@dimen/dp1"/>
+    <corners android:radius="@dimen/dp1"
+             android:bottomRightRadius="@dimen/dp10" android:bottomLeftRadius="@dimen/dp10"
+             android:topLeftRadius="@dimen/dp10" android:topRightRadius="@dimen/dp10"/>
+</shape>

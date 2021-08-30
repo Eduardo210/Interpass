@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titleMyAccount"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp100"
+                        android:layout_marginTop="@dimen/dp8"
+                        android:elevation="@dimen/dp11"
+                        android:src="@drawable/icon_profile"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                        android:id="@+id/imgAccount"
+                        android:layout_width="@dimen/dp90"
+                        android:layout_height="@dimen/dp90"
+                        android:elevation="@dimen/dp11"
+                        app:layout_constraintLeft_toLeftOf="@id/imgBack"
+                        app:layout_constraintRight_toRightOf="@id/imgBack"
+                        app:layout_constraintTop_toTopOf="@id/imgBack"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBack"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/dp11"
+                        android:src="@drawable/icon_add_foto"
+                        app:layout_constraintCircle="@id/imgBack"
+                        app:layout_constraintCircleAngle="45"
+                        app:layout_constraintCircleRadius="@dimen/dp46"
+                        tools:ignore="MissingConstraints"/>
+
+                <View
+                        android:id="@+id/guide1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginBottom="@dimen/dp1"
+                        app:layout_constraintTop_toTopOf="@id/imgBack"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBack"/>
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card"
+                        android:elevation="@dimen/dp10"
+                        app:layout_constraintTop_toTopOf="@id/guide1"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                            android:id="@+id/txtvLabelName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/name"
+                            android:layout_marginTop="@dimen/dp70"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textAlignment="viewStart"/>
+
+                    <EditText
+                            android:id="@+id/txtName"
+                            android:inputType="textCapWords|textPersonName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp40"
+                            android:padding="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            android:background="@drawable/edit_text"
+                            android:paddingStart="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp10"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelName"
+                            tools:text="Gustavo"/>
+
+                    <TextView
+                            android:id="@+id/txtvNameError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginTop="@dimen/dp0"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtName"
+                            android:textAlignment="center"
+                            android:background="@drawable/error_view"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelLastName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/lastName"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvNameError"
+                            android:textAlignment="viewStart"/>
+
+                    <EditText
+                            android:id="@+id/txtLastName"
+                            android:inputType="textCapWords|textPersonName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp40"
+                            android:padding="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            android:background="@drawable/edit_text"
+                            android:paddingStart="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp10"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelLastName"
+                            tools:text="Peralta"/>
+
+                    <TextView
+                            android:id="@+id/txtvLastNameError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginTop="@dimen/dp0"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtLastName"
+                            android:textAlignment="center"
+                            android:background="@drawable/error_view"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelSurName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/lastName2"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvLastNameError"
+                            android:textAlignment="viewStart"/>
+
+                    <EditText
+                            android:id="@+id/txtSurName"
+                            android:inputType="textCapWords|textPersonName"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp40"
+                            android:padding="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            android:textSize="18sp"
+                            android:textColor="@color/blackText"
+                            android:background="@drawable/edit_text"
+                            android:paddingStart="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp10"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelSurName"
+                            tools:text="Vega"/>
+
+                    <TextView
+                            android:id="@+id/txtvSurNameError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginTop="@dimen/dp0"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSurName"
+                            android:textAlignment="center"
+                            android:background="@drawable/error_view"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelEmail"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/email"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvSurNameError"
+                            android:textAlignment="viewStart"/>
+
+                    <EditText
+                            android:id="@+id/txtEmail"
+                            android:inputType="textEmailAddress"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp40"
+                            android:padding="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelEmail"
+                            android:textSize="18sp"
+                            android:background="@drawable/edit_text"
+                            android:hint="Ej: ejemplo@dominio.com"
+                            android:paddingStart="@dimen/dp10"/>
+
+                    <TextView
+                            android:id="@+id/txtvEmailError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginTop="@dimen/dp0"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+                            android:textAlignment="center"
+                            android:background="@drawable/error_view"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"/>
+
+                    <TextView
+                            android:id="@+id/txtvLabelPhone"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="@color/grayText"
+                            android:text="@string/phone"
+                            android:layout_marginTop="@dimen/dp34"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtvEmailError"
+                            android:textAlignment="viewStart"/>
+
+                    <EditText
+                            android:id="@+id/txtPhone"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="@dimen/dp40"
+                            android:padding="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvLabelPhone"
+                            android:textSize="18sp"
+                            android:maxLength="10"
+                            android:inputType="number"
+                            android:hint="Ej: 5585638169"
+                            android:background="@drawable/edit_text"
+                            android:paddingStart="@dimen/dp10"/>
+
+                    <TextView
+                            android:id="@+id/txtvPhoneError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginTop="@dimen/dp0"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPhone"
+                            android:textAlignment="center"
+                            android:background="@drawable/error_view"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"/>
+
+                    <Button
+                            android:id="@+id/btnSave"
+                            android:fontFamily="@font/rubik_medium"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:text="@string/saveTag"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:layout_marginTop="@dimen/dp60"
+                            android:layout_marginStart="@dimen/dp16"
+                            android:layout_marginEnd="@dimen/dp16"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtvPhoneError"
+                            android:layout_marginBottom="@dimen/dp76"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:enabled="false"
+                            android:background="@drawable/button"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

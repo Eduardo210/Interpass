@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp76"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/navbar"
+            android:elevation="@dimen/dp10"
+            android:gravity="bottom"/>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp12"
+            android:translationZ="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtvTitle"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:text="@string/titlePurchase"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/back_btn"
+                android:translationZ="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp8"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp76"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:elevation="@dimen/dp10">
+
+                <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/logo_interpass"/>
+
+                <TextView
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:layout_marginTop="@dimen/dp15"
+                        app:layout_constraintTop_toBottomOf="@+id/logo"
+                        android:background="@color/grayLine"/>
+
+                <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="16sp"
+                        android:textColor="@color/titleBlack"
+                        android:text="Número de tag: "/>
+
+                <TextView
+                        android:id="@+id/txtTagNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txt4"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/titleBlack"
+                        tools:text="02384534671   2"/>
+
+                <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTagNumber"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="16sp"
+                        android:textColor="@color/titleBlack"
+                        android:text="Seleccionar monto: "/>
+
+                <TextView
+                        android:id="@+id/txtvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txt1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginEnd="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp15"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textSize="52sp"
+                        android:textColor="@color/blackText"
+                        android:text="$0.00"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txt1"
+                        app:layout_constraintLeft_toRightOf="@+id/txtvAmount"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/blackText"
+                        android:text="MXN"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp90"
+                        app:layout_constraintTop_toBottomOf="@+id/txtvAmount"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:orientation="horizontal"/>
+
+                <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/rvAmount"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginTop="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/rubik_regular"
+                        android:textSize="16sp"
+                        android:textColor="@color/titleBlack"
+                        android:text="Seleccionar tarjeta: "/>
+
+                <android.support.constraint.ConstraintLayout
+                        android:id="@+id/cardsView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txt2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginStart="@dimen/dp10">
+
+                    <android.support.v4.view.ViewPager
+                            android:id="@+id/pagerPayments"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp180"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <Button
+                        android:id="@+id/btnRegister"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="@string/payBtn"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginTop="@dimen/dp60"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardsView"
+                        android:layout_marginBottom="@dimen/dp76"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:enabled="false"
+                        android:background="@drawable/button"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

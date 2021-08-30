@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/blue"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp0"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/content_tag"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="32:10"
+            android:elevation="@dimen/dp5">
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/cardPrede"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                app:cardBackgroundColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/predeterminado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:maxLines="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:text="Predeterminado" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutImg"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginStart="@dimen/dp10">
+
+            <ImageView
+                    android:id="@+id/imgMove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/icon_peaje"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/txtvRFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@color/blackText"
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/dp10"
+                app:layout_constraintLeft_toRightOf="@+id/layoutImg"
+                app:layout_constraintTop_toTopOf="@+id/layoutImg"
+                tools:text="PEMO200323R22" />
+
+        <TextView
+                android:id="@+id/txtvName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/blackText"
+                android:fontFamily="@font/rubik_medium"
+                app:layout_constraintLeft_toRightOf="@+id/layoutImg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp18"
+                tools:text="Lorena Méndez "
+                android:maxLines="2"/>
+
+        <ImageView
+                android:id="@+id/imageViewAccesory"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/down"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/dp15"
+                android:tint="@color/blue"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

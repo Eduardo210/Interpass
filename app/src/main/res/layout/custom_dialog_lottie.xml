@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@color/blue">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/mini_card"
+            android:elevation="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10">
+
+        <TextView
+                android:id="@+id/txtv1"
+                android:fontFamily="@font/walsheim_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:text="Actualizar movimientos"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp20"
+                android:textAlignment="center"/>
+
+        <android.support.constraint.Guideline
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/guideline"/>
+
+        <Button
+                android:id="@+id/btnDialogNext"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmBtn"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:enabled="true"
+                android:background="@drawable/button"
+                android:layout_below="@+id/lottieAnimation"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp10"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

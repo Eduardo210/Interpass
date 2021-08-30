@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".presentation.view.TagsActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg"
+            android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/navbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp76"
+                android:fitsSystemWindows="true"
+                android:background="@drawable/navbar"
+                android:elevation="@dimen/dp10"
+                android:gravity="bottom"/>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp12"
+                android:translationZ="@dimen/dp10">
+            <!--
+                    <Button
+                            android:id="@+id/btnMenu"
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:background="@drawable/menu"
+                            android:translationZ="@dimen/dp10"/>
+            -->
+            <TextView
+                    android:id="@+id/txtvTitle"
+                    android:fontFamily="@font/walsheim_bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:text="@string/titleMyTags"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp76">
+
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp180"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/dp0"/>
+
+            <Button
+                    android:id="@+id/btnQRCode"
+                    android:layout_width="@dimen/dp70"
+                    android:layout_height="@dimen/dp45"
+                    android:background="@drawable/dark_blue_btn"
+                    android:drawableTop="@drawable/qr_code"
+                    android:paddingTop="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp40"
+                    android:layout_marginStart="@dimen/dp10"
+                    app:layout_constraintTop_toBottomOf="@+id/carousel"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                    android:id="@+id/btnTopUpBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp45"
+                    android:text="@string/addMoney"
+                    android:background="@drawable/button_blue"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="15sp"
+                    android:drawableEnd="@drawable/icon_recargar_saldo"
+                    android:drawablePadding="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp10"
+                    android:paddingStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp40"
+                    app:layout_constraintTop_toBottomOf="@+id/carousel"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                    android:visibility="gone"
+                    android:id="@+id/btnBilling"
+                    android:layout_width="@dimen/dp70"
+                    android:layout_height="@dimen/dp45"
+                    android:text="@string/billing"
+                    android:background="@drawable/button_blue"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/rubik_light"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp40"
+                    android:layout_marginEnd="@dimen/dp10"
+                    app:layout_constraintTop_toBottomOf="@+id/carousel"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                    android:id="@+id/btnQuestion"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:background="@drawable/question_copy"
+                    android:drawablePadding="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp14"
+                    android:layout_marginTop="@dimen/dp15"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnTopUpBalance"
+                    android:gravity="center"/>
+
+            <TextView
+                    android:id="@+id/txtvMoves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/blackText"
+                    android:text="@string/moves"
+                    android:fontFamily="@font/walsheim_bold"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp10"
+                    app:layout_constraintTop_toBottomOf="@+id/btnTopUpBalance"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp0"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvMoves"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/dp5">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvMoves"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="@dimen/dp0"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <android.support.constraint.ConstraintLayout
+                    android:id="@+id/noMovesView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtvMoves"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:visibility="invisible">
+
+                <ImageView
+                        android:id="@+id/imgNoMoves"
+                        android:layout_width="@dimen/dp42"
+                        android:layout_height="@dimen/dp42"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/icon_sinregistros"
+                        app:layout_constraintVertical_bias="0.35"/>
+
+                <TextView
+                        android:id="@+id/txtvNoMoves"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/grayText"
+                        android:text="@string/noMoves"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toBottomOf="@+id/imgNoMoves"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/card_menu">
+
+        <include layout="@layout/side_menu"/>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

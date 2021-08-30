@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@color/blue">
+
+    <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/mini_card">
+
+        <RelativeLayout
+                android:id="@+id/layoutImg"
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp70"
+                android:translationZ="@dimen/dp2"
+                android:background="@drawable/circule_red"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp10">
+
+            <ImageView
+                    android:id="@+id/imgDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/icon_x"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutImg"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_gravity="center">
+
+            <TextView
+                    android:id="@+id/txtvDialogTitle"
+                    android:fontFamily="@font/walsheim_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/errorRed"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textAlignment="center"
+                    tools:text="Reenviar código"/>
+
+            <TextView
+                    android:id="@+id/txtvDialogDescription"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/grayText"
+                    android:layout_marginStart="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:layout_marginTop="@dimen/dp10"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textAlignment="center"
+                    tools:text="¿Desea recibir el código nuevamente?"/>
+
+            <LinearLayout
+                    android:id="@+id/linearInput"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                <Button
+                        android:id="@+id/btnDialogCancel"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="@string/cancelBtn"
+                        android:textColor="@color/errorRed"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:enabled="true"
+                        android:background="@drawable/button_red"
+                        android:layout_weight="0.5"/>
+
+                <Button
+                        android:id="@+id/btnDialogConfirmD"
+                        android:fontFamily="@font/rubik_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:text="@string/confirmBtn"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:enabled="true"
+                        android:background="@drawable/button_full_red"
+                        android:layout_weight="0.5"/>
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp25"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
